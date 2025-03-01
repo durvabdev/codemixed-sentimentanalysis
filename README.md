@@ -8,8 +8,11 @@ pip install -r requirements.txt
 git clone https://github.com/facebookresearch/fastText.git
 
 cd fastText
+
 mkdir vectormodels
+
 cd vectormodels
+
 ./fastText/download_model.py en
 
 ./fastText/download_model.py bn
