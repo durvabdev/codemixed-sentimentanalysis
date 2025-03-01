@@ -1,5 +1,3 @@
-# codemixed-sentimentanalysis
-
 # Setup Instructions
 Follow these steps to set up the required dependencies and download the models.
 
@@ -17,7 +15,7 @@ cd fastText
 
 ./download_mode.py hi
 
-# switch to home directory
-to run 
+# Switch to home directory
+
 python run.py -d fasttext
 python run.py -d bpemb
