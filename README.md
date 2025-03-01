@@ -8,14 +8,15 @@ pip install -r requirements.txt
 git clone https://github.com/facebookresearch/fastText.git
 
 cd fastText
+mkdir vectormodels
+cd vectormodels
+./fastText/download_model.py en
 
-./download_model.py en
+./fastText/download_model.py bn
 
-./download_model.py bn
-
-./download_mode.py hi
+./fastText/download_model.py hi
 
 # Switch to home directory
-
+cd ~
 python run.py -d fasttext
 python run.py -d bpemb
