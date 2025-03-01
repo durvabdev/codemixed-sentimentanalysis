@@ -7,7 +7,7 @@ import WordCNN_LSTM as EBCNNLSTM
 import WordCNNLSTM as SWCNNLSTM
 from collections import Counter
 import Word_BiLSTM as BiLSTM
-embeddingpath = '../embeddings'
+embeddingpath = 'embeddings'
 """
 
 this code is the starting point & takes inputs to run code, processes data
