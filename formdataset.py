@@ -6,7 +6,7 @@ import stopwordsiso as stopwords
 from torch.nn.utils.rnn import pad_sequence
 from transformers import AutoTokenizer, BertTokenizer, BertModel
 
-vectormodelpath = '../fastText/vectormodels'
+vectormodelpath = 'fastText/vectormodels'
 fasttext_bn = fasttext.load_model(f'{vectormodelpath}/cc.bn.300.bin')
 fasttext_hi = fasttext.load_model(f'{vectormodelpath}/cc.hi.300.bin')
 fasttext_en = fasttext.load_model(f'{vectormodelpath}/cc.en.300.bin')
@@ -21,7 +21,7 @@ ftmodelmap = {'bn':fasttext_bn, 'hi':fasttext_hi, 'en':fasttext_en}
 bpmodelmap = {'bn':bpemb_bn, 'hi':bpemb_hi, 'en':bpemb_en}
 
 def returndataset(datasetnames):
-    dataset_path = '../archive'
+    dataset_path = 'archive'
     data = []
     for name in datasetnames:
         filename = dataset_path + '/' + name + '.csv'
@@ -153,6 +153,6 @@ def process(data, embeddingmodel):
                     y_array.append(labelmap[label])
                 else:
                     print("sentence embedding is None")
-    np.save(f'../embeddings/{embeddingmodel}_X.npy', np.array(x_array).astype(np.float32))
-    np.save(f'../embeddings/{embeddingmodel}_Y.npy', np.array(y_array).astype(np.float32))
+    np.save(f'embeddings/{embeddingmodel}_X.npy', np.array(x_array).astype(np.float32))
+    np.save(f'embeddings/{embeddingmodel}_Y.npy', np.array(y_array).astype(np.float32))
     return np.array(x_array), np.array(y_array)
