@@ -20,6 +20,9 @@ cd vectormodels
 ./fastText/download_model.py hi
 
 # Switch to home directory
+
 cd ~
+
 python run.py -d fasttext
+
 python run.py -d bpemb
