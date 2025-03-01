@@ -35,13 +35,13 @@ if __name__ == "__main__":
         if args.embedding == 'bpemb':
             SWCNNLSTM.wrapper(x_array.astype(np.float32), y_array.astype(np.int64))
         else:
-            #EBCNNLSTM.wrapper(x_array, y_array)
-            BiLSTM.wrapper(x_array, y_array)
+            EBCNNLSTM.wrapper(x_array, y_array)
+            #BiLSTM.wrapper(x_array, y_array)
     else:
         data = returndataset(args.datasets)
         x_array, y_array = process(data, args.embedding)
         if args.embedding == 'bpemb':
             SWCNNLSTM.wrapper(x_array, y_array)
         else:
-            BiLSTM.wrapper(x_array, y_array)
-            #EBCNNLSTM.wrapper(x_array, y_array)
+            #BiLSTM.wrapper(x_array, y_array)
+            EBCNNLSTM.wrapper(x_array, y_array)
