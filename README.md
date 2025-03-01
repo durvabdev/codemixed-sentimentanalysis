@@ -10,7 +10,9 @@ pip install -r requirements.txt
 git clone https://github.com/facebookresearch/fastText.git
 cd fastText
 ./download_model.py en
+
 ./download_model.py bn
+
 ./download_mode.py hi
 
 # switch to home directory
