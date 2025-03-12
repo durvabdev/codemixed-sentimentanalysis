@@ -1,28 +1,31 @@
-# Setup Instructions
-Follow these steps to set up the required dependencies and download the models.
 
-# Install Requirements
+# Setup Instructions  
+
+Follow these steps to set up the required dependencies and download the models.  
+
+## Install Requirements  
+
+```sh
 pip install -r requirements.txt
+```
 
-# Get fastText models
+## Download fastText Models  
+
+```sh
 git clone https://github.com/facebookresearch/fastText.git
-
 cd fastText
-
 mkdir vectormodels
-
 cd vectormodels
 
-./fastText/download_model.py en
+../download_model.py en
+../download_model.py bn
+../download_model.py hi
+```
 
-./fastText/download_model.py bn
+## Run the Script  
 
-./fastText/download_model.py hi
-
-# Switch to home directory
-
+```sh
 cd ~
-
 python run.py -d fasttext
-
 python run.py -d bpemb
+```
